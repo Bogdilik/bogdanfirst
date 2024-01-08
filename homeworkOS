@@ -1,0 +1,5 @@
+g++ -fpic -c sum.cpp -o sum.o
+g++ -shared sum.o -o libsum.so
+
+g++ four.cpp -lsum -L. -o four
+g++ five.cpp -lsum -L. -o five
